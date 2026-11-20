@@ -1,0 +1,3 @@
+# baseline sintetica de ejemplo
+HARD-01:main.go
+HARD-03:main.go

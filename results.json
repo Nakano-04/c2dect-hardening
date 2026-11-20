@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "total": 8,
+    "by_rule": {
+      "HARD-01": 1,
+      "HARD-02": 1,
+      "HARD-03": 1,
+      "HARD-04": 1,
+      "HARD-05": 2,
+      "HARD-06": 1,
+      "HARD-07": 1
+    },
+    "by_severity": {
+      "critical": 1,
+      "high": 3,
+      "low": 1,
+      "medium": 3
+    },
+    "verdict": "FAIL"
+  },
+  "findings": [
+    {
+      "rule": "HARD-04",
+      "severity": "medium",
+      "path": ".env.example",
+      "line": 0,
+      "detail": "C2_FRAME_SECRET no documentado"
+    },
+    {
+      "rule": "HARD-06",
+      "severity": "high",
+      "path": "client.py",
+      "line": 2,
+      "detail": "TLS deshabilitado"
+    },
+    {
+      "rule": "HARD-05",
+      "severity": "medium",
+      "path": "config.py",
+      "line": 1,
+      "detail": "escape hatch sin aviso"
+    },
+    {
+      "rule": "HARD-05",
+      "severity": "medium",
+      "path": "config.py",
+      "line": 2,
+      "detail": "escape hatch sin aviso"
+    },
+    {
+      "rule": "HARD-03",
+      "severity": "high",
+      "path": "main.go",
+      "line": 3,
+      "detail": "bind 0.0.0.0"
+    },
+    {
+      "rule": "HARD-01",
+      "severity": "critical",
+      "path": "main.go",
+      "line": 5,
+      "detail": "dev-secret-change-me"
+    },
+    {
+      "rule": "HARD-07",
+      "severity": "low",
+      "path": "requirements.txt",
+      "line": 1,
+      "detail": "sin fijar: flask"
+    },
+    {
+      "rule": "HARD-02",
+      "severity": "high",
+      "path": "server.key",
+      "line": 0,
+      "detail": "clave privada versionada"
+    }
+  ],
+  "fixture_sha256": {
+    "fixtures/dirty/main.go": "6377550d373b30edca537695f1418d6f6e7aba098a88172657c9d404d6d2e4fb",
+    "fixtures/dirty/config.py": "c94a70039ea57ae3e6739e405be0f49526f5c02b2cc2e14f78d1c35f26886d52",
+    "fixtures/dirty/client.py": "240f21e13e3a3dc13787cf97a21a4ac3bcfab91b0448fa7133a02ed3f2db8a6b",
+    "fixtures/dirty/requirements.txt": "6058d1f88f4206e122bb7240e743b04139b16c66ec50bd569da906e66ce916cf",
+    "fixtures/clean/main.go": "ed03cddf03b2a441cb2db820259782d9ccbe50ee24bccb1d4869f9b211369c14"
+  }
+}

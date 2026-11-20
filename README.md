@@ -26,6 +26,22 @@ localmente: **4/4 gates PASS**, `go vet` limpio, workflow YAML válido.
 - Migrar tests cross-tenant de `ci-interactive.yml` a un job no interactivo.
 - SBOM y `govulncheck` en el pipeline.
 
+## Prototipo verificable
+
+`hardening_scan.py` — escáner genérico con 7 reglas (secretos, claves, bind,
+entorno, escape hatches, TLS, dependencias), severidades, resumen y
+baseline-type ratchet (nuevos vs. corregidos). No depende de C2-DECT.
+
+```powershell
+python -m unittest discover -v
+python hardening_scan.py --root fixtures/dirty --json
+python hardening_scan.py --root fixtures/dirty --baseline fixtures/baseline.txt --json
+```
+
+Targets sintéticos: `fixtures/dirty` (7 reglas disparadas) y `fixtures/clean`
+(sin hallazgos). Resultado medido en `results.json`, con hashes de las fixtures.
+CI ejecuta los tests en cada push.
+
 ## Ámbito
 
 Laboratorio aislado, alcance declarado y RoE firmada. Uso exclusivamente
