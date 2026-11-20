@@ -1,4 +1,4 @@
-# Plan 5 — Hardening del propio C2
+# Plan 5 - Hardening del propio C2
 
 **Solo información y resultados.** Sin código fuente.
 
@@ -28,7 +28,7 @@ localmente: **4/4 gates PASS**, `go vet` limpio, workflow YAML válido.
 
 ## Prototipo verificable
 
-`hardening_scan.py` — escáner genérico con 7 reglas (secretos, claves, bind,
+`hardening_scan.py` - escáner genérico con 7 reglas (secretos, claves, bind,
 entorno, escape hatches, TLS, dependencias), severidades, resumen y
 baseline-type ratchet (nuevos vs. corregidos). No depende de C2-DECT.
 

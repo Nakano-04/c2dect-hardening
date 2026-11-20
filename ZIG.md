@@ -1,4 +1,4 @@
-# Ejecutable Zig — `scan_zig`
+# Ejecutable Zig - `scan_zig`
 
 Escáner de endurecimiento en Zig 0.17.1. Recibe rutas de ficheros y reporta
 los hallazgos de las reglas HARD-01/03/05/06/07 implementadas en esta version.
