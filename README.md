@@ -42,6 +42,13 @@ Targets sintéticos: `fixtures/dirty` (7 reglas disparadas) y `fixtures/clean`
 (sin hallazgos). Resultado medido en `results.json`, con hashes de las fixtures.
 CI ejecuta los tests en cada push.
 
+## Dimensión ofensiva
+
+El modelo de amenaza del propio C2 se estudia desde la perspectiva del
+adversario (ver `c2dect-investigacion/OFENSIVA/01-modelo-de-amenaza.md`): los
+cinco vectores de la auditoría y los *escape hatches* de laboratorio definen
+la superficie que un atacante intentaría explotar.
+
 ## Ámbito
 
 Laboratorio aislado, alcance declarado y RoE firmada. Uso exclusivamente
